@@ -132,7 +132,7 @@
                                             {{ $comentario->comentario }}
                                         </p>
                                         <a href="{{ route('posts.index', $comentario->user) }}" class="font-bold mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-700 hover:bg-white hover:shadow-2xs disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-800">
-                                            <img class="shrink-0 size-6 rounded-full" src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8auto=format&fit=facearea&facepad=3&w=320&h=320&q=80" alt="Avatar">
+                                            <img class="shrink-0 size-6 rounded-full" src="{{ $comentario->user->imagen ? asset('perfil') . '/' . $comentario->user->imagen : asset('img/usuario.svg') }}" alt="{{ $comentario->user->username }}">
                                             {{ $comentario->user->username }}
                                         </a>
                                     </div>
